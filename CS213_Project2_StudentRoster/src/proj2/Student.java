@@ -22,7 +22,7 @@ public class Student {
     public static final int maxCredNoAddFee = 16;
 
     private Date lastPaymentDate = null;
-    private boolean wasCalculated = false;
+    private boolean calculated = false;
 
     private double lastPayment = 0.00;
 
@@ -31,8 +31,8 @@ public class Student {
         this.creditHourTotal = creditHourTotal;
         this.profile = new Profile(name, major);
     }
-    public boolean wasCalculated() {
-        return this.wasCalculated;
+    public boolean calculated() {
+        return this.calculated;
     }
     public Profile getProfile() {
         return this.profile;
@@ -44,8 +44,8 @@ public class Student {
     public double get_DueTuition() {
         return this.tuitionDue;
     }
-    public void set_calculated(boolean wasCalculated) {
-        this.wasCalculated = wasCalculated;
+    public void set_calculated(boolean calculated) {
+        this.calculated = calculated;
     }
     public Date getDatePayLast() {
         return this.lastPaymentDate;
