@@ -17,8 +17,8 @@ public class TriState extends NonResident {
     private String triState;
 
 
-    public TriState(String name, Major major, int TOTAL_CREDIT_HOURS, String triState){
-        super(name, major, TOTAL_CREDIT_HOURS);
+    public TriState(String name, Major major, int creditHourTotal, String triState){
+        super(name, major, creditHourTotal);
         this.triState = triState;
     }
 
