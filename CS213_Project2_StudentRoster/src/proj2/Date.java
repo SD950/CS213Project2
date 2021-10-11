@@ -18,7 +18,7 @@ public class Date implements Comparable<Date> {
     private static final int QUADRENNIAL = 4;
     private static final int CENTENNIAL = 100;
     private static final int QUATERCENTENNIAL = 400;
-    private static final int THE_TWENTY_TWENTY_ONE = 2021;
+    private static final int MAXYEAR = 2021;
     
     private static final int JANUARY = 1;
     private static final int FEBRUARY = 2;
@@ -150,7 +150,7 @@ public class Date implements Comparable<Date> {
         		&& (date.day > today.day)) {
             return false;
         }
-        if (date.year < THE_TWENTY_TWENTY_ONE) {
+        if (date.year < MAXYEAR) {
             return false;
         }
         if (date.year % QUADRENNIAL == 
