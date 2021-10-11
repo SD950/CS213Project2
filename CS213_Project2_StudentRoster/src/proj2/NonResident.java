@@ -1,22 +1,32 @@
-/**
- * 
- */
 package proj2;
 
-/**
- * @author Stephen Danso, Sri Vishnu Jayakumar
- *
- */
 import java.text.DecimalFormat;
 
+/**
+ * Class that extends Student class and includes specific data and operations to
+ * non-resident students
+ * 
+ * @author Stephen Danso, Sri Vishnu Jayakumar
+ */
 public class NonResident extends Student {
 	private int partNonResidentTuition = 966 * getCreditHour();
 
+	/**
+	 * Constructor used to create NonResident object using name, major, and credit
+	 * hours
+	 * 
+	 * @param name            Student name
+	 * @param major           Student major
+	 * @param creditHourTotal Student credit hours
+	 */
 	public NonResident(String name, Major major, int creditHourTotal) {
 
 		super(name, major, creditHourTotal);
 	}
 
+	/**
+	 * Overriden method used to calculate the amount of tuition due
+	 */
 	@Override
 	public void tuitionDue() {
 		if (this.getCreditHour() < creditMinFull) {
@@ -31,6 +41,11 @@ public class NonResident extends Student {
 		}
 	}
 
+	/**
+	 * Overriden toString() method to create a string representation of payment
+	 * 
+	 * @return String representation of payment string and credit hours
+	 */
 	@Override
 	public String toString() {
 		DecimalFormat df = new DecimalFormat("0.00");
